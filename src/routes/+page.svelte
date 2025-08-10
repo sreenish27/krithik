@@ -104,16 +104,16 @@
         items: ["System Design", "Microservices", "TDD", "Algorithms", "Data Structures"]
     }
   ];
- 
+
 </script>
 
 <main>
   <header class="intro-header">
     <h1 class="greeting">Hi, I’m Krithik 👋</h1>
     <p class="intro-text">
-        I’m a <strong>product builder</strong> who bridges the gap between ambitious technical goals and real-world business needs. I thrive in roles that demand full ownership, from initial strategy and design to engineering execution and stakeholder management. I'm the person you bring in when you need to not only build a product right, but also build the right product.
+        I’m a <strong>product builder</strong> who bridges the gap between ambitious technical goals and real-world business needs. I thrive in roles that demand full ownership—from initial strategy and design to engineering execution and stakeholder management. I'm the person you bring in when you need to not only build a product right, but also build the right product.
         <br><br>
-        Based in San Jose, CA, and ready to relocate for the right opportunity. Outside of work, you’ll usually find me hitting the gym, playing chess, diving into a good non-fiction book or reading up about latest tech advancements on twitter.
+        Based in San Jose, CA, and ready to relocate for the right opportunity. Outside of work, you’ll usually find me hitting the gym, playing chess, diving into a good non-fiction book, or reading up about the latest tech advancements on Twitter.
     </p>
     <div class="header-links">
       <a href="https://www.linkedin.com/in/krithiksai/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -121,6 +121,8 @@
       <a href="https://github.com/sreenish27" target="_blank" rel="noopener noreferrer">GitHub</a>
       <span>·</span>
       <a href="https://x.com/SaiSreenish" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <span>·</span>
+      <a href="https://medium.com/@krithikintl" target="_blank" rel="noopener noreferrer">Writings</a>
       <span>·</span>
       <a href="/resume.pdf" target="_blank">Resume</a>
     </div>
@@ -201,7 +203,27 @@
       --accent-color: #FF3B30; /* Red Accent Color */
       --bg-color: #f7f7f7; /* Very light grey */
       --border-color: #ddd;
+      --selection-bg: #FBBF24; /* Gold/Yellow selection color */
   }
+
+  /* --- Custom Cursor & Selection --- */
+  html {
+      /* A more dynamic, crosshair-style cursor. The 12 12 centers it. */
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>') 12 12, auto;
+  }
+
+  ::selection {
+      background-color: var(--selection-bg);
+      color: #111;
+      text-shadow: none;
+  }
+  ::-moz-selection { /* For Firefox */
+      background-color: var(--selection-bg);
+      color: #111;
+      text-shadow: none;
+  }
+  /* --- End of Custom Styles --- */
+
 
   /* Base Styles */
   body {
@@ -214,7 +236,7 @@
   main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 6rem 2rem 4rem 2rem; /* Increased top padding */
+    padding: 6rem 2rem 4rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -243,7 +265,7 @@
   }
   .greeting {
       font-size: 2.5rem;
-      font-weight: 800; /* Bolder weight */
+      font-weight: 800;
       margin-bottom: 1rem;
   }
   .intro-text {
@@ -317,7 +339,7 @@
     transform: translate(-4px, -4px) scale(1.01);
     box-shadow: 4px 4px 0px #111;
     border-color: #111;
-    background-color: rgba(255, 59, 48, 0.05); /* Very slight red tint */
+    background-color: rgba(255, 59, 48, 0.05);
   }
   .description {
     color: #333;
@@ -402,7 +424,7 @@
   .skill-tag {
     background-color: #e9e9e9;
     padding: 0.5rem 1rem;
-    border-radius: 2rem; /* pill shape */
+    border-radius: 2rem;
     font-size: 0.9rem;
     font-weight: 700;
     color: #333;
