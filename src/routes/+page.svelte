@@ -246,7 +246,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2025 Krithik Sai Sreenish Gopinath. Built with SvelteKit.</p>
+        <p>© 2025 Krithik Sai Sreenish Gopinath. Built with 💛.</p>
     </div>
 </footer>
 
