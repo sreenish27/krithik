@@ -1,300 +1,416 @@
+<!-- 
+  File: src/routes/+page.svelte
+  Instructions: 
+  1. This file contains the full portfolio.
+  2. IMPORTANT: You must have the "Manrope" font imported in your 'src/app.html':
+     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+-->
+
 <script>
   // --- Data for your portfolio ---
 
-  const education = [
+  const experience = [
     {
-      university: "Northeastern University – Boston, MA",
-      degree: "Master of Science, Engineering Management",
-      dates: "Sep 2022 – Dec 2024",
-      courses: "Courses: Digital Product Design, Data Mining for Engineering, Natural Language Processing, Operations Research"
+      company: "Wurq (at the Harvard i-lab)",
+      role: "Product Manager Intern (Sep 2023 – Apr 2024)",
+      summary: "Shaped the product strategy for an ML-powered fitness platform, translating raw sensor data into actionable workout feedback based on direct athlete testing."
     },
     {
-      university: "Visvesvaraya National Institute of Technology – Nagpur, India",
-      degree: "Bachelor of Technology in Engineering",
-      dates: "July 2017 – May 2021",
-      courses: null
+      company: "ZS Associates",
+      role: "Business Operations Associate (June 2021 – June 2022)",
+      summary: "Scaled a pharmaceutical compensation platform from pilot to hundreds of enterprise users by introducing agile workflows and automating data pipelines to improve efficiency."
+    },
+    {
+      company: "Kalo Labs",
+      role: "Founder (Mar 2020 – Oct 2020)",
+      summary: "Founded a digital marketing agency where I led the full customer lifecycle from outreach to contract, and built a custom automation platform to streamline client notifications and lead management."
     }
   ];
 
-  const professionalPath = [
+  const projects = [
     {
-      title: "Product Manager Intern",
-      company: "Wurq",
-      location: "Cambridge, MA",
-      dates: "Sept 2023 – Apr 2024",
-      duties: [
-        "Drove product strategy for an ML-powered fitness analytics platform, growing active users to 24,500 (40% increase) by launching sensor-to-insight features that translated raw data into actionable workout feedback.",
-        "Reduced pose correction feature latency from 800ms to 40ms using CNN model distillation and on-device computing, boosting daily active users to 13,500 (35% growth) while slashing monthly cloud costs to $18,000 (28% drop).",
-        "Led cross-functional agile development with teams in Boston, Frankfurt, and Milan, shortening sprint cycles to 7 weeks (30% faster) and maintaining defect rates below 5% by enforcing rigorous code reviews and testing protocols.",
-        "Conducted user testing with over 30 athletes and ran A/B experiments, raising form accuracy to 91% (30% improvement) and increasing monthly feature activations to 7,250 (45% up) by refining algorithms based on real-world feedback.",
-        "Built Go-To-Market partnerships with sports programs, retaining 8,500 subscribers (85% retention) and securing product-market fit.",
-        "Applied the RICE prioritization framework to feature development, delivering 26 high-impact features on time per quarter (30% more).",
-      ],
+      title: "Film Search 🎬",
+      description: "Ever get frustrated trying to find a movie you can't quite name? This is the fix. I built a search engine from the ground up that lets you talk to it like a person. It uses a custom data pipeline and a 70B parameter LLM to understand what you mean, not just what you type.",
+      stack: "Node.js, React, Express.js, PostgreSQL, Python, TailwindCSS, Scrapy, Groq",
+      links: [
+          { name: "Live", url: "https://filmsearch-kappa.vercel.app/" },
+          { name: "Demo", url: "https://www.loom.com/share/df7dfc3116654913bf5fe05c97d909b7?sid=1323dae3-f9d0-4783-a884-a66ed147e8af" },
+          { name: "Code", url: "https://github.com/sreenish27/filmsearch" }
+      ]
     },
     {
-      title: "Business Operations Associate",
-      company: "ZS Associates",
-      location: "Pune, India",
-      dates: "June 2021 – June 2022",
-      duties: [
-        "Owned end-to-end development of $32M pharmaceutical compensation platform, driving $1.2M revenue impact through optimized workflows for enterprise clients.",
-        "Scaled analytics dashboard from pilot to 200+ enterprise users across neuroscience and nephrology divisions, maintaining 98% satisfaction.",
-        "Introduced agile methodologies and automated SQL/Python data pipelines, delivering 24 features per quarter (26% increase) to support quarterly compensation cycles with faster, data-driven updates.",
-        "Established an OKR framework to align business objectives with technical execution, growing platform active users to 580 (45% growth) across sales teams by focusing on key adoption metrics.",
-        "Mentored junior team members on product methodology, boosting their feature prioritization accuracy to 90% (40% increase) and reducing backlog refinement time to 4 hours per sprint (50% decrease).",
-        "Designed and built a hierarchical access control system for the MBO tool, reducing monthly support tickets to 300 (40% drop) by creating intuitive workflows that minimized user errors.",
-      ],
+      title: "ChuckleBox 🤖",
+      description: "This project, built with the MIT AI Club, tackles a tough problem: analyzing hours of audio. I designed a scalable AWS backend and an asynchronous pipeline that can take massive audio files and process them for machine learning analysis, all without crashing.",
+      stack: "Python, React, Flask, TensorFlow, Large Language Models (LLMs), AWS",
+      links: [
+          { name: "Project Page", url: "https://www.sundai.club/projects/bf3fd58f-0f07-4d9b-a2a0-01a4582ce3ae" }
+      ]
+    },
+    {
+      title: "YouTube Comment Analyzer 📊",
+      description: "An NLP exploration that visualizes YouTube comment sections as a word cloud and uses the data to train a text generation model. It's a quick way to get the pulse of a comment section and see what the hive mind is thinking.",
+      stack: "Python, NLP, Machine Learning",
+      links: [
+        { name: "Code", url: "https://github.com/sreenish27/YouTube-Comment-Analysis-and-Text-Generation" }
+      ]
+    },
+    {
+      title: "Customer Churn Analysis 📉",
+      description: "A practical application of data science to predict customer churn for a music player. This project uses a mix of regression, SVM, and PCA to identify users who are likely to leave, giving the business a chance to intervene.",
+      stack: "Python, Scikit-learn, Pandas, SVM, PCA",
+      links: [
+        { name: "Code", url: "https://github.com/sreenish27/Customer-Churn-Analysis" }
+      ]
+    },
+    {
+      title: "Ball Classifier 🏀",
+      description: "A fun computer vision project that uses a neural network to recognize different kinds of sports balls. It's a simple but effective demonstration of building and training a custom image classifier.",
+      stack: "Python, TensorFlow, Keras, Computer Vision",
+      links: [
+        { name: "Code", url: "https://github.com/sreenish27/ball_classifier" }
+      ]
+    },
+    {
+      title: "Voyantra 🌍",
+      description: "A no-nonsense trip planner for when your wallet has the final say. Instead of endless scrolling, you just tell it your budget, and it generates a full travel itinerary. It’s all about making travel accessible by putting the financial constraints first.",
+      stack: "Node.js, React, Express.js, MongoDB, TailwindCSS",
+      links: [
+        { name: "Code", url: "https://github.com/sreenish27/voyantra" }
+      ]
     },
   ];
 
-  const whatIBuilt = [
-    {
-      title: "Film Search",
-      link: "#",
-      description: "Architected a scalable data pipeline using a Python crawler and PostgreSQL, enabling real-time search across 54k+ films. Built core search functionality using TF-IDF and BM25 ranking algorithms to deliver relevant and fast query results. Integrated a Llama 3.1 70B LLM to create a ”Film Chat” feature, allowing users to interact with film data conversationally.",
-      stack: "Node.js, React, Express.js, PostgreSQL, Postman, TailwindCSS, Python, Scrapy (Crawler), Groq (llama 70b 3.1 LLM)",
-    },
-    {
-      title: "Voyantra: Budget Based Trip Planner",
-      link: "#",
-      description: "Analyzed user survey data to quantify traveler pain points and define the core project problem statement. Modeled the travel booking workflow to identify inefficiencies and design a more streamlined user process. Developed a quantitative model to score and prioritize features based on projected user impact. Synthesized market and user analysis into an MVP definition to secure project development resources.",
-      stack: "Node.js, React, Express.js, MongoDB, Postman, TailwindCSS",
-    },
+  const bookshelf = [
+      { title: "Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI", author: "Walter Isaacson" },
+      { title: "Amusing Ourselves to Death", author: "Neil Postman" },
+      { title: "Asura: Tale of the Vanquished", author: "Anand Neelakantan" }
   ];
+
+  const skills = [
+    {
+        category: "Product & Design",
+        items: ["UX/UI Design", "Figma", "Stakeholder Management", "JIRA", "Agile Methodologies", "Go-to-Market Strategy"]
+    },
+    {
+        category: "Languages & Frameworks",
+        items: ["Python", "JavaScript/TypeScript", "React", "Node.js", "Express.js", "TailwindCSS"]
+    },
+    {
+        category: "Databases & DevOps",
+        items: ["PostgreSQL", "MongoDB", "AWS", "Docker", "Git", "CI/CD"]
+    },
+    {
+        category: "Engineering Fundamentals",
+        items: ["System Design", "Microservices", "TDD", "Algorithms", "Data Structures"]
+    }
+  ];
+
 </script>
 
 <main>
-  <header>
-    <h1>KRITHIK SAI SREENISH GOPINATH</h1>
-    <div class="contact-info">
-        <span>krithiksaisreenishg@gmail.com</span>
-        <span>&nbsp;|&nbsp;</span>
-        <span>+1 857-693-9815</span>
-        <span>&nbsp;|&nbsp;</span>
-        <span>San Jose, CA</span>
-    </div>
+  <header class="intro-header">
+    <h1 class="greeting">Hi, I’m Krithik 👋</h1>
+    <p class="intro-text">
+        I’m a <strong>product builder</strong> who bridges the gap between ambitious technical goals and real-world business needs. I thrive in roles that demand full ownership, from initial strategy and design to engineering execution and stakeholder management. I'm the person you bring in when you need to not only build a product right, but also build the right product.
+        <br><br>
+        Based in San Jose, CA, and ready to relocate for the right opportunity. Outside of work, you’ll usually find me hitting the gym, playing chess, or diving into a good non-fiction book on new tech advancements.
+    </p>
     <div class="header-links">
-      <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/krithiksai/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <span>·</span>
+      <a href="https://github.com/sreenish27" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <span>·</span>
+      <a href="https://x.com/SaiSreenish" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <span>·</span>
+      <a href="/resume.pdf" target="_blank">Resume</a>
     </div>
   </header>
 
   <section>
-    <h2>Education</h2>
-    <div class="education-list">
-      {#each education as edu}
-        <div class="degree-entry">
-          <h3>{edu.degree}</h3>
-          <p class="university">{edu.university} | {edu.dates}</p>
-          {#if edu.courses}
-            <p class="details">{edu.courses}</p>
-          {/if}
-        </div>
-      {/each}
-    </div>
+      <h2>What I’m Working Toward</h2>
+      <p class="mission-statement">
+        I’m seeking a role where I can own the <strong>end-to-end product vision</strong>, combining strategy, design, and engineering into solutions that stick. I'm actively looking for positions like <strong>Product Manager, Product Engineer, Design Engineer, Product Analyst,</strong> or <strong>Product Associate.</strong>
+      </p>
   </section>
 
   <section>
-    <h2>Professional Path</h2>
+    <h2>Professional Journey</h2>
     <div class="job-list">
-      {#each professionalPath as job}
+      {#each experience as job}
         <div class="job-entry">
-          <h3>{job.title}</h3>
-          <p class="company">{job.company} | {job.location} | {job.dates}</p>
-          <ul>
-            {#each job.duties as duty}
-              <li>{duty}</li>
-            {/each}
-          </ul>
+          <h3>{job.company}</h3>
+          <p class="role">{job.role}</p>
+          <p class="job-summary">{job.summary}</p>
         </div>
       {/each}
     </div>
   </section>
 
   <section>
-    <h2>What I've Built</h2>
+    <h2>What I’ve Built</h2>
     <div class="project-grid">
-      {#each whatIBuilt as project}
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-card"
-        >
+      {#each projects as project}
+        <div class="project-card">
           <h3>{project.title}</h3>
           <p class="description">{project.description}</p>
-          <p class="stack"><strong>Tech Stack:</strong> {project.stack}</p>
-        </a>
+          <p class="stack"><strong>Stack:</strong> {project.stack}</p>
+          <div class="project-links">
+            {#each project.links as link}
+                <a href={link.url} target="_blank" rel="noopener noreferrer">{link.name}</a>
+            {/each}
+          </div>
+        </div>
       {/each}
     </div>
   </section>
 
   <section>
-    <h2>Skills</h2>
-    <div class="skills-container">
-        <div class="skill-category">
-            <h3>Technical Stack</h3>
-            <p>Python (Data Pipelines, Web Crawling), JavaScript/TypeScript, React, Node.js, Express.js, TailwindCSS, SQL (PostgreSQL), MongoDB, Natural Language Processing (NLP)</p>
+      <h2>From the Bookshelf</h2>
+      <div class="bookshelf">
+          {#each bookshelf as book}
+              <div class="book-entry">
+                  <span class="book-title">{book.title}</span>
+                  <span class="book-author">by {book.author}</span>
+              </div>
+          {/each}
+      </div>
+      <a href="https://www.goodreads.com/user/show/172059882-krithik" target="_blank" rel="noopener noreferrer" class="goodreads-link">
+          View all on Goodreads →
+      </a>
+  </section>
+
+  <section>
+    <h2>Skills at a Glance</h2>
+    <div class="skills-section-container">
+      {#each skills as category}
+        <div class="skill-group">
+            <h4>{category.category}</h4>
+            <div class="skills-tag-container">
+                {#each category.items as skill}
+                    <span class="skill-tag">{skill}</span>
+                {/each}
+            </div>
         </div>
-        <div class="skill-category">
-            <h3>Infrastructure & DevOps</h3>
-            <p>AWS (S3, EC2, Lambda), Docker, Git, CI/CD</p>
-        </div>
-        <div class="skill-category">
-            <h3>Engineering Fundamentals</h3>
-            <p>Data Structures, Algorithms, System Design, Microservices Architecture, Test-Driven Development (TDD)</p>
-        </div>
-        <div class="skill-category">
-            <h3>Developer Tools</h3>
-            <p>JIRA, Figma, Postman, Looker Studio, Tableau</p>
-        </div>
+      {/each}
     </div>
   </section>
 </main>
 
 <style>
+  :root {
+      --accent-color: #FF3B30; /* Red Accent Color */
+      --bg-color: #f7f7f7; /* Very light grey */
+      --border-color: #ddd;
+  }
+
   /* Base Styles */
+  body {
+      background-color: var(--bg-color);
+      margin: 0;
+      padding: 0;
+      font-family: 'Manrope', sans-serif;
+      color: #333;
+  }
   main {
     max-width: 800px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 4rem 2rem; /* Increased top padding */
     display: flex;
     flex-direction: column;
     gap: 4rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
   }
   h3 {
     font-size: 1.25rem;
+    font-weight: 700;
   }
   p {
     margin: 0 0 1rem 0;
   }
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
 
-  /* Header Section */
-  header {
+  /* Header / Intro Section */
+  .intro-header {
     text-align: left;
-    border-bottom: 1px solid var(--text-color);
     padding-bottom: 2rem;
   }
-  header h1 {
-    font-size: 2.25rem;
-    margin-bottom: 0.5rem;
-  }
-  .contact-info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-      color: #555;
+  .greeting {
+      font-size: 2.5rem;
+      font-weight: 800; /* Bolder weight */
       margin-bottom: 1rem;
   }
+  .intro-text {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #333;
+      max-width: 70ch;
+  }
   .header-links {
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 0.75rem;
     font-size: 1rem;
   }
   .header-links a {
     font-weight: 700;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    color: #111;
+    text-decoration: none;
+  }
+  .header-links a:hover {
+      color: var(--accent-color);
+      border-bottom-color: var(--accent-color);
+      transform: translate(-2px, -2px);
+  }
+  .header-links span {
+      color: var(--border-color);
   }
 
-  /* Education Section */
-  .education-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-  }
-  .university {
-      color: #555;
-      font-weight: 700;
-      margin-top: 0.25rem;
-      margin-bottom: 0.25rem;
-  }
-  .details {
-      font-size: 0.9rem;
+  /* Mission Statement Section */
+  .mission-statement {
+      font-size: 1.2rem;
+      line-height: 1.7;
       color: #333;
-      margin: 0;
   }
 
-  /* Experience Section */
+  /* Professional Journey Section */
   .job-list {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
   }
-  .company {
+  .role {
     color: #555;
     font-size: 1rem;
     font-weight: 700;
-    margin-top: 0.25rem;
+    margin: 0.25rem 0 0.5rem 0;
   }
-  .job-entry ul {
-    margin-top: 1rem;
-    padding-left: 1.2rem;
-    list-style-type: disc;
-  }
-  .job-entry li {
-    margin-bottom: 0.75rem;
+  .job-summary {
+      color: #333;
+      line-height: 1.7;
+      margin: 0;
   }
 
-  /* Projects Section */
+  /* What I've Built Section */
   .project-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   .project-card {
-    display: block;
     padding: 1.5rem;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     border-radius: 4px;
-    background-color: var(--bg-color);
+    background-color: white;
+    transition: all 0.2s ease-out;
   }
   .project-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    border-color: var(--accent-color);
-    text-shadow: none;
-  }
-  .project-card:hover h3 {
-    color: var(--accent-color);
+    transform: translate(-4px, -4px) scale(1.01);
+    box-shadow: 4px 4px 0px #111;
+    border-color: #111;
+    background-color: rgba(255, 59, 48, 0.05); /* Very slight red tint */
   }
   .description {
     color: #333;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0 1.5rem 0;
+    line-height: 1.7;
   }
   .stack {
     font-size: 0.9rem;
     color: #555;
-    margin: 0.5rem 0 0 0;
+    margin: 0;
   }
-  
-  /* Skills Section */
-  .skills-container {
+  .project-links {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+  }
+  .project-links a {
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.25rem 0.75rem;
+      border: 2px solid #111;
+      border-radius: 4px;
+      color: #111;
+      transition: all 0.2s ease-out;
+      text-decoration: none;
+  }
+  .project-links a:hover {
+      background-color: #111;
+      color: white;
+      transform: translateY(-2px);
+  }
+
+  /* Bookshelf Section */
+  .bookshelf {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1rem;
   }
-  .skill-category h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
+  .book-entry {
+      display: flex;
+      flex-direction: column;
+      padding: 0.75rem 0;
       border-bottom: 1px solid var(--border-color);
-      padding-bottom: 0.25rem;
   }
-  .skill-category p {
-      margin: 0;
-      line-height: 1.7;
-      color: #333;
+  .book-title {
+      font-weight: 700;
+      color: #111;
+  }
+  .book-author {
+      font-size: 0.9rem;
+      color: #555;
+  }
+  .goodreads-link {
+      margin-top: 1.5rem;
+      font-weight: 700;
+      display: inline-block;
+      color: #111;
+      text-decoration: none;
+  }
+  .goodreads-link:hover {
+      color: var(--accent-color);
+  }
+
+  /* Skills at a Glance Section */
+  .skills-section-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+  .skill-group h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+      color: #111;
+  }
+  .skills-tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .skill-tag {
+    background-color: #e9e9e9;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem; /* pill shape */
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333;
+    transition: all 0.2s ease-out;
+  }
+  .skill-tag:hover {
+      background-color: var(--accent-color);
+      color: white;
+      transform: translateY(-2px);
   }
 </style>
