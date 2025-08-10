@@ -1,98 +1,106 @@
-<!-- 
-  File: src/routes/+page.svelte
-  Instructions: 
-  1. Create a new SvelteKit project.
-  2. Replace the entire content of 'src/routes/+page.svelte' with this code.
-  3. Create 'src/app.css' and add the global styles provided in the instructions.
-  4. Update 'src/app.html' to include the 'Inter' font.
--->
-
 <script>
   // --- Data for your portfolio ---
 
+  const education = [
+    {
+      university: "Northeastern University – Boston, MA",
+      degree: "Master of Science, Engineering Management",
+      dates: "Sep 2022 – Dec 2024",
+      courses: "Courses: Digital Product Design, Data Mining for Engineering, Natural Language Processing, Operations Research"
+    },
+    {
+      university: "Visvesvaraya National Institute of Technology – Nagpur, India",
+      degree: "Bachelor of Technology in Engineering",
+      dates: "July 2017 – May 2021",
+      courses: null
+    }
+  ];
+
   const professionalPath = [
     {
-      title: "Senior Software Engineer",
-      company: "Tech Corp",
-      location: "San Francisco, CA",
-      dates: "Jan 2022 - Present",
+      title: "Product Manager Intern",
+      company: "Wurq",
+      location: "Cambridge, MA",
+      dates: "Sept 2023 – Apr 2024",
       duties: [
-        "Led the development of a major feature from conception to launch, resulting in a 20% increase in user engagement.",
-        "Mentored junior engineers, improving team productivity by 15%.",
-        "Architected and implemented a new microservice for data processing.",
+        "Drove product strategy for an ML-powered fitness analytics platform, growing active users to 24,500 (40% increase) by launching sensor-to-insight features that translated raw data into actionable workout feedback.",
+        "Reduced pose correction feature latency from 800ms to 40ms using CNN model distillation and on-device computing, boosting daily active users to 13,500 (35% growth) while slashing monthly cloud costs to $18,000 (28% drop).",
+        "Led cross-functional agile development with teams in Boston, Frankfurt, and Milan, shortening sprint cycles to 7 weeks (30% faster) and maintaining defect rates below 5% by enforcing rigorous code reviews and testing protocols.",
+        "Conducted user testing with over 30 athletes and ran A/B experiments, raising form accuracy to 91% (30% improvement) and increasing monthly feature activations to 7,250 (45% up) by refining algorithms based on real-world feedback.",
+        "Built Go-To-Market partnerships with sports programs, retaining 8,500 subscribers (85% retention) and securing product-market fit.",
+        "Applied the RICE prioritization framework to feature development, delivering 26 high-impact features on time per quarter (30% more).",
       ],
     },
     {
-      title: "Software Engineer",
-      company: "Innovate LLC",
-      location: "Austin, TX",
-      dates: "Jun 2019 - Dec 2021",
+      title: "Business Operations Associate",
+      company: "ZS Associates",
+      location: "Pune, India",
+      dates: "June 2021 – June 2022",
       duties: [
-        "Developed and maintained front-end components using React and TypeScript.",
-        "Collaborated with UX/UI designers to create a seamless user experience.",
-        "Reduced API response times by 30% through performance optimization.",
+        "Owned end-to-end development of $32M pharmaceutical compensation platform, driving $1.2M revenue impact through optimized workflows for enterprise clients.",
+        "Scaled analytics dashboard from pilot to 200+ enterprise users across neuroscience and nephrology divisions, maintaining 98% satisfaction.",
+        "Introduced agile methodologies and automated SQL/Python data pipelines, delivering 24 features per quarter (26% increase) to support quarterly compensation cycles with faster, data-driven updates.",
+        "Established an OKR framework to align business objectives with technical execution, growing platform active users to 580 (45% growth) across sales teams by focusing on key adoption metrics.",
+        "Mentored junior team members on product methodology, boosting their feature prioritization accuracy to 90% (40% increase) and reducing backlog refinement time to 4 hours per sprint (50% decrease).",
+        "Designed and built a hierarchical access control system for the MBO tool, reducing monthly support tickets to 300 (40% drop) by creating intuitive workflows that minimized user errors.",
       ],
     },
   ];
 
   const whatIBuilt = [
     {
-      title: "Project Alpha",
-      link: "https://github.com",
-      description: "A data visualization dashboard that helps users understand complex datasets through interactive charts and graphs.",
-      stack: "SvelteKit, D3.js, Node.js",
-    },
-    {
-      title: "Portfolio Site",
-      link: "https://github.com",
-      description: "A minimalist, single-page portfolio built to showcase professional work and skills, with a focus on clean design.",
-      stack: "SvelteKit, CSS",
-    },
-  ];
-
-  const writings = [
-    {
-      title: "Understanding Svelte's Reactivity Model",
+      title: "Film Search",
       link: "#",
-      date: "Aug 2025",
-      readTime: "7 min read",
+      description: "Architected a scalable data pipeline using a Python crawler and PostgreSQL, enabling real-time search across 54k+ films. Built core search functionality using TF-IDF and BM25 ranking algorithms to deliver relevant and fast query results. Integrated a Llama 3.1 70B LLM to create a ”Film Chat” feature, allowing users to interact with film data conversationally.",
+      stack: "Node.js, React, Express.js, PostgreSQL, Postman, TailwindCSS, Python, Scrapy (Crawler), Groq (llama 70b 3.1 LLM)",
     },
     {
-      title: "CSS Techniques for Minimalist Design",
+      title: "Voyantra: Budget Based Trip Planner",
       link: "#",
-      date: "Jul 2025",
-      readTime: "5 min read",
+      description: "Analyzed user survey data to quantify traveler pain points and define the core project problem statement. Modeled the travel booking workflow to identify inefficiencies and design a more streamlined user process. Developed a quantitative model to score and prioritize features based on projected user impact. Synthesized market and user analysis into an MVP definition to secure project development resources.",
+      stack: "Node.js, React, Express.js, MongoDB, Postman, TailwindCSS",
     },
   ];
 </script>
 
 <main>
-  <!-- =================================================================
-  HEADER SECTION
-  ================================================================== -->
   <header>
-    <h1>Hi, I am Krithik.</h1>
-    <p class="subtitle">
-      I am a Software Engineer specializing in building scalable and beautiful
-      web applications.
-    </p>
+    <h1>KRITHIK SAI SREENISH GOPINATH</h1>
+    <div class="contact-info">
+        <span>krithiksaisreenishg@gmail.com</span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>+1 857-693-9815</span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>San Jose, CA</span>
+    </div>
     <div class="header-links">
       <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="#" target="_blank">Resume</a>
     </div>
   </header>
 
-  <!-- =================================================================
-  PROFESSIONAL PATH SECTION
-  ================================================================== -->
+  <section>
+    <h2>Education</h2>
+    <div class="education-list">
+      {#each education as edu}
+        <div class="degree-entry">
+          <h3>{edu.degree}</h3>
+          <p class="university">{edu.university} | {edu.dates}</p>
+          {#if edu.courses}
+            <p class="details">{edu.courses}</p>
+          {/if}
+        </div>
+      {/each}
+    </div>
+  </section>
+
   <section>
     <h2>Professional Path</h2>
     <div class="job-list">
       {#each professionalPath as job}
         <div class="job-entry">
           <h3>{job.title}</h3>
-          <p class="company">{job.company} | {job.location} — {job.dates}</p>
+          <p class="company">{job.company} | {job.location} | {job.dates}</p>
           <ul>
             {#each job.duties as duty}
               <li>{duty}</li>
@@ -103,9 +111,6 @@
     </div>
   </section>
 
-  <!-- =================================================================
-  WHAT I'VE BUILT SECTION
-  ================================================================== -->
   <section>
     <h2>What I've Built</h2>
     <div class="project-grid">
@@ -118,70 +123,35 @@
         >
           <h3>{project.title}</h3>
           <p class="description">{project.description}</p>
-          <p class="stack">Stack: {project.stack}</p>
+          <p class="stack"><strong>Tech Stack:</strong> {project.stack}</p>
         </a>
       {/each}
     </div>
   </section>
 
-  <!-- =================================================================
-  WRITINGS SECTION
-  ================================================================== -->
   <section>
-    <h2>Writings</h2>
-    <div class="post-list">
-      {#each writings as post}
-        <a
-          href={post.link}
-          class="post-entry"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="post-title">{post.title}</span>
-          <span class="post-meta">{post.date} • {post.readTime}</span>
-        </a>
-      {/each}
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill-category">
+            <h3>Technical Stack</h3>
+            <p>Python (Data Pipelines, Web Crawling), JavaScript/TypeScript, React, Node.js, Express.js, TailwindCSS, SQL (PostgreSQL), MongoDB, Natural Language Processing (NLP)</p>
+        </div>
+        <div class="skill-category">
+            <h3>Infrastructure & DevOps</h3>
+            <p>AWS (S3, EC2, Lambda), Docker, Git, CI/CD</p>
+        </div>
+        <div class="skill-category">
+            <h3>Engineering Fundamentals</h3>
+            <p>Data Structures, Algorithms, System Design, Microservices Architecture, Test-Driven Development (TDD)</p>
+        </div>
+        <div class="skill-category">
+            <h3>Developer Tools</h3>
+            <p>JIRA, Figma, Postman, Looker Studio, Tableau</p>
+        </div>
     </div>
   </section>
-
-  <!-- =================================================================
-  ACADEMIC FOUNDATION SECTION
-  ================================================================== -->
-  <section>
-    <h2>Academic Foundation</h2>
-    <div class="degree-entry">
-      <h3>Bachelor of Science in Computer Science</h3>
-      <p class="university">University of California, Berkeley | Graduated May 2019</p>
-      <p class="details">Honors: Magna Cum Laude</p>
-    </div>
-  </section>
-
-  <!-- =================================================================
-  MILESTONES SECTION
-  ================================================================== -->
-  <section>
-    <h2>Milestones & Recognition</h2>
-    <ul class="milestones-list">
-      <li>AWS Certified Solutions Architect - Associate, 2023</li>
-      <li>1st Place Winner - Bay Area Hackathon, 2022</li>
-      <li>Tech Corp 'Innovator of the Year' Award, 2022</li>
-    </ul>
-  </section>
-
-  <!-- =================================================================
-  GET IN TOUCH SECTION (FOOTER)
-  ================================================================== -->
-  <footer class="footer-section">
-    <h2>Get In Touch</h2>
-    <p>Feel free to reach out for collaboration or inquiries.</p>
-    <a href="mailto:your.email@example.com" class="email-link">your.email@example.com</a>
-    <p class="copyright">© 2025 Krithik. Built with SvelteKit.</p>
-  </footer>
 </main>
 
-<!-- =================================================================
-  STYLES
-================================================================== -->
 <style>
   /* Base Styles */
   main {
@@ -190,13 +160,15 @@
     padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 4rem;
   }
   h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
   }
   h3 {
     font-size: 1.25rem;
@@ -213,14 +185,22 @@
   /* Header Section */
   header {
     text-align: left;
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom: 2rem;
   }
-  .subtitle {
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 60ch;
+  header h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      color: #555;
+      margin-bottom: 1rem;
   }
   .header-links {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: flex;
     gap: 1.5rem;
     font-size: 1rem;
@@ -229,7 +209,25 @@
     font-weight: 700;
   }
 
-  /* Professional Path Section */
+  /* Education Section */
+  .education-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+  .university {
+      color: #555;
+      font-weight: 700;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+  }
+  .details {
+      font-size: 0.9rem;
+      color: #333;
+      margin: 0;
+  }
+
+  /* Experience Section */
   .job-list {
     display: flex;
     flex-direction: column;
@@ -238,6 +236,7 @@
   .company {
     color: #555;
     font-size: 1rem;
+    font-weight: 700;
     margin-top: 0.25rem;
   }
   .job-entry ul {
@@ -246,10 +245,10 @@
     list-style-type: disc;
   }
   .job-entry li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
-  /* What I've Built Section */
+  /* Projects Section */
   .project-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -272,81 +271,30 @@
     color: var(--accent-color);
   }
   .description {
-    color: #555;
+    color: #333;
     margin: 0.5rem 0;
   }
   .stack {
     font-size: 0.9rem;
-    color: #333;
-    font-weight: 700;
+    color: #555;
     margin: 0.5rem 0 0 0;
   }
-
-  /* Writings Section */
-  .post-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .post-entry {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-  }
-  .post-entry:hover {
-    transform: translateX(5px);
-    border-color: var(--accent-color);
-    text-shadow: none;
-  }
-  .post-title {
-    font-weight: 700;
-  }
-  .post-entry:hover .post-title {
-    color: var(--accent-color);
-  }
-  .post-meta {
-    font-size: 0.9rem;
-    color: #555;
-    flex-shrink: 0;
-    margin-left: 1rem;
-  }
-
-  /* Academic Foundation Section */
-  .university {
-    color: #555;
-    margin-top: 0.25rem;
-  }
-  .details {
-    font-size: 0.9rem;
-  }
   
-  /* Milestones Section */
-  .milestones-list li {
-      padding: 0.5rem 0;
+  /* Skills Section */
+  .skills-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+  .skill-category h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
       border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.25rem;
   }
-  .milestones-list li:last-child {
-      border-bottom: none;
-  }
-
-  /* Footer Section */
-  .footer-section {
-    text-align: center;
-    border-top: 1px solid var(--border-color);
-    padding-top: 4rem;
-  }
-  .email-link {
-    font-size: 1.25rem;
-    font-weight: 700;
-    display: inline-block;
-    margin: 1rem 0;
-  }
-  .copyright {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #555;
+  .skill-category p {
+      margin: 0;
+      line-height: 1.7;
+      color: #333;
   }
 </style>
