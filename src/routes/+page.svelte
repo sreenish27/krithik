@@ -1,3 +1,11 @@
+<!-- 
+  File: src/routes/+page.svelte
+  Instructions: 
+  1. This file contains the full portfolio.
+  2. IMPORTANT: You must have the "Manrope" font imported in your 'src/app.html':
+     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+-->
+
 <script>
   // --- Data for your portfolio ---
 
@@ -136,13 +144,15 @@
       <a href="https://medium.com/@krithikintl" target="_blank" rel="noopener noreferrer">Writings</a>
       <span>·</span>
       <a href="resume.pdf" target="_blank">Resume</a>
+      <span>·</span>
+      <a href="#contact">Contact</a>
     </div>
   </header>
 
   <section>
       <h2>What I’m Working Toward</h2>
       <p class="mission-statement">
-        I’m seeking a role where I can own the <strong>end-to-end product vision</strong>, combining strategy, design, and engineering into solutions that stick. I'm actively looking for positions like <strong>Product Manager, Product Engineer, Design Engineer, Product Analyst,</strong> or <strong>Product Associate</strong> in the tech industry at large.
+        I’m seeking a role where I can own the <strong>end-to-end product vision</strong>, combining strategy, design, and engineering into solutions that stick. I'm actively looking for positions like <strong>Product Manager, Product Engineer, Design Engineer, Product Analyst,</strong> or <strong>Product Associate.</strong>
       </p>
   </section>
 
@@ -226,6 +236,20 @@
   </section>
 </main>
 
+<footer id="contact" class="site-footer">
+    <div class="footer-content">
+        <h2 class="footer-heading">Let's build something together.</h2>
+        <p>If you have a project in mind or just want to connect, feel free to get in touch.</p>
+        <div class="contact-links">
+            <a href="mailto:krithiksaisreenishg@gmail.com">krithiksaisreenishg@gmail.com</a>
+            <a href="tel:+18576939815">+1 (857) 693-9815</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Krithik Sai Sreenish Gopinath. Built with SvelteKit.</p>
+    </div>
+</footer>
+
 <style>
   :root {
       --accent-color: #FF3B30; /* Red Accent Color */
@@ -237,6 +261,7 @@
   /* --- Custom Cursor & Selection --- */
   html {
       cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>') 12 12, auto;
+      scroll-behavior: smooth;
   }
 
   ::selection {
@@ -471,5 +496,56 @@
       background-color: var(--accent-color);
       color: white;
       transform: translateY(-2px);
+  }
+
+  /* Contact Section / Footer */
+  .site-footer {
+    border-top: 2px solid var(--border-color);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .footer-heading {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    border: none;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+  .footer-content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #555;
+    max-width: 60ch;
+    margin: 0 auto 2.5rem auto;
+  }
+  .footer-content .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .footer-content .contact-links a {
+    color: #111;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-out;
+  }
+  .footer-content .contact-links a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+  }
+  .footer-bottom {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+  }
+  .footer-bottom p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
   }
 </style>
