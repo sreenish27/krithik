@@ -124,7 +124,7 @@
       <span>·</span>
       <a href="https://medium.com/@krithikintl" target="_blank" rel="noopener noreferrer">Writings</a>
       <span>·</span>
-      <a href="resume.pdf" target="_blank">Resume</a>
+      <a href="https://drive.google.com/file/d/1T2O3MYIUEHuQHYCW__MbmPOSwkmlRYl3/view?usp=sharing" target="_blank">Resume</a>
     </div>
   </header>
 
