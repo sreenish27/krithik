@@ -1,11 +1,3 @@
-<!-- 
-  File: src/routes/+page.svelte
-  Instructions: 
-  1. This file contains the full portfolio.
-  2. IMPORTANT: You must have the "Manrope" font imported in your 'src/app.html':
-     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
--->
-
 <script>
   // --- Data for your portfolio ---
 
@@ -79,6 +71,25 @@
       ]
     },
   ];
+  
+  const education = [
+    {
+        university: "Northeastern University – Boston, MA",
+        degree: "Master of Science, Engineering Management (2022–2024)",
+        notes: [
+            "Secured 2nd place representing the university's chess team.",
+            "Explored Boston and have visited 10+ states across the US (and counting)."
+        ]
+    },
+    {
+        university: "Visvesvaraya National Institute of Technology – Nagpur, India",
+        degree: "Bachelor of Technology in Engineering (2017–2021)",
+        notes: [
+            "Secured admission by placing in the top 1% of the national JEE Mains entrance exam.",
+            "Represented the university on the competitive dance team."
+        ]
+    }
+  ];
 
   const bookshelf = [
       { title: "Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI", author: "Walter Isaacson" },
@@ -124,7 +135,7 @@
       <span>·</span>
       <a href="https://medium.com/@krithikintl" target="_blank" rel="noopener noreferrer">Writings</a>
       <span>·</span>
-      <a href="https://drive.google.com/file/d/1T2O3MYIUEHuQHYCW__MbmPOSwkmlRYl3/view?usp=sharing" target="_blank">Resume</a>
+      <a href="resume.pdf" target="_blank">Resume</a>
     </div>
   </header>
 
@@ -163,6 +174,23 @@
           </div>
         </div>
       {/each}
+    </div>
+  </section>
+
+  <section>
+    <h2>Education & Milestones</h2>
+    <div class="job-list">
+        {#each education as school}
+            <div class="job-entry">
+                <h3>{school.university}</h3>
+                <p class="role">{school.degree}</p>
+                <ul class="notes-list">
+                    {#each school.notes as note}
+                        <li>{note}</li>
+                    {/each}
+                </ul>
+            </div>
+        {/each}
     </div>
   </section>
 
@@ -208,7 +236,6 @@
 
   /* --- Custom Cursor & Selection --- */
   html {
-      /* A more dynamic, crosshair-style cursor. The 12 12 centers it. */
       cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>') 12 12, auto;
   }
 
@@ -304,7 +331,7 @@
       color: #333;
   }
 
-  /* Professional Journey Section */
+  /* Professional Journey & Education Sections */
   .job-list {
     display: flex;
     flex-direction: column;
@@ -320,6 +347,16 @@
       color: #333;
       line-height: 1.7;
       margin: 0;
+  }
+  .notes-list {
+      list-style-type: '→ ';
+      padding-left: 1.2rem;
+      color: #333;
+      line-height: 1.7;
+      margin-top: 1rem;
+  }
+  .notes-list li {
+      margin-bottom: 0.5rem;
   }
 
   /* What I've Built Section */
