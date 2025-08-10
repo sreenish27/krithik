@@ -142,7 +142,7 @@
   <section>
       <h2>What I’m Working Toward</h2>
       <p class="mission-statement">
-        I’m seeking a role where I can own the <strong>end-to-end product vision</strong>, combining strategy, design, and engineering into solutions that stick. I'm actively looking for positions like <strong>Product Manager, Product Engineer, Design Engineer, Product Analyst,</strong> or <strong>Product Associate.</strong>
+        I’m seeking a role where I can own the <strong>end-to-end product vision</strong>, combining strategy, design, and engineering into solutions that stick. I'm actively looking for positions like <strong>Product Manager, Product Engineer, Design Engineer, Product Analyst,</strong> or <strong>Product Associate.</strong> in the tech industry at large.
       </p>
   </section>
 
