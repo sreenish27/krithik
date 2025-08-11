@@ -548,4 +548,29 @@
     color: #777;
     margin: 0;
   }
+/* --- NEW: Mobile Responsiveness --- */
+  @media (max-width: 640px) {
+    main {
+        padding: 4rem 1rem 2rem 1rem; /* Reduced padding for mobile */
+        gap: 3rem; /* Tighter gap between sections */
+    }
+    .greeting {
+        font-size: 2rem; /* Smaller main heading */
+    }
+    .intro-text, .mission-statement {
+        font-size: 1.1rem; /* Slightly smaller body text */
+    }
+    h2 {
+        font-size: 1.1rem; /* Smaller section headings */
+    }
+    .footer-heading {
+        font-size: 1.5rem; /* Smaller footer heading */
+    }
+    .footer-content p {
+        font-size: 1.1rem;
+    }
+    .footer-content .contact-links {
+        font-size: 1rem;
+    }
+  }
 </style>
