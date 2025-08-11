@@ -149,10 +149,10 @@
     </div>
   </header>
 
-  <section>
+   <section>
       <h2>What I’m Working Toward</h2>
       <p class="mission-statement">
-        I’m seeking a role where I can own the <strong>end-to-end product vision</strong>, combining strategy, design, and engineering into solutions that stick. I'm actively looking for positions like <strong>Product Manager, Product Engineer, Design Engineer, Product Analyst,</strong>, <strong>Forward Deployed Engineer</strong> or <strong>Product Associate.</strong>
+        My focus is on solving core business problems through technology. I’m seeking a role that operates at the intersection of product, analytics, and engineering, where I can contribute to building foundational solutions. I am actively pursuing positions such as <strong>Product Manager, Product Engineer, Forward Deployed Engineer, Design Engineer, Product Analyst,</strong> and <strong>Associate.</strong>
       </p>
   </section>
 
