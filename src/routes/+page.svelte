@@ -100,7 +100,7 @@
   ];
 
   const bookshelf = [
-      { title: "Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI", author: "Walter Isaacson" },
+      { title: "Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI", author: "Karen Hao" },
       { title: "Amusing Ourselves to Death", author: "Neil Postman" },
       { title: "Asura: Tale of the Vanquished", author: "Anand Neelakantan" }
   ];
