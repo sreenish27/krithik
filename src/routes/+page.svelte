@@ -152,7 +152,7 @@
    <section>
       <h2>What I’m Working Toward</h2>
       <p class="mission-statement">
-        My focus is on solving core business problems through technology. I’m seeking a role that operates at the intersection of product, analytics, and engineering, where I can contribute to building foundational solutions. I am actively pursuing positions such as <strong>Product Manager, Product Engineer, Forward Deployed Engineer, Design Engineer, Product Analyst,</strong> and <strong>Associate.</strong>
+        I'm seeking a role where I can own the full product lifecycle on an AI-native team. My goal is to operate as a true product builder, fusing my skills in engineering, product, and design to ship solutions that solve meaningful user problems.
       </p>
   </section>
 
