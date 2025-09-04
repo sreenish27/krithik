@@ -48,7 +48,7 @@
       stack: "Node.js, React, Express.js, PostgreSQL, Python, TailwindCSS, Scrapy, Groq",
       links: [
           { name: "Live", url: "https://filmsearch-kappa.vercel.app/" },
-          { name: "Demo", url: "https://www.loom.com/share/df7dfc3116654913bf5fe05c97d909b7?sid=1323dae3-f9d0-4783-a884-a66ed147e8af" },
+          { name: "Demo", url: "https://www.youtube.com/watch?v=ULXZU1060UU" },
           { name: "Code", url: "https://github.com/sreenish27/filmsearch" }
       ]
     },
