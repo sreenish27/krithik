@@ -1,36 +1,50 @@
-<!-- 
-  File: src/routes/+page.svelte
-  Instructions: 
-  1. This file contains the full portfolio.
-  2. IMPORTANT: You must have the "Manrope" font imported in your 'src/app.html':
-     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
--->
-
 <script>
-  // --- Data for your portfolio ---
+  // --- Updated Data for your portfolio ---
 
   const experience = [
     {
       company: "Wurq (at the Harvard i-lab)",
       role: "Product Manager Intern (Sep 2023 – Apr 2024)",
-      summary: "Shaped the product strategy for an ML-powered fitness platform, translating raw sensor data into actionable workout feedback based on direct athlete testing."
+      achievements: [
+        "Conducted user research with over 30 athletes to define functional requirements for a new ML-powered pose correction feature.",
+        "Guided the development of a CNN model that reduced latency from 800ms to under 40ms by translating user needs into detailed technical specifications.",
+        "Reduced model inference costs by 28% by analyzing cloud computing data and presenting a successful proposal for on-device processing.",
+        "Drove a 30% increase in form-correction accuracy and a 45% lift in monthly usage by synthesizing A/B test results and user feedback.",
+        "Improved development velocity by 30% within a global agile team by refining sprint planning and documenting user stories."
+      ]
     },
     {
       company: "ZS Associates",
       role: "Business Operations Associate (June 2021 – June 2022)",
-      summary: "Scaled a pharmaceutical compensation platform from pilot to hundreds of enterprise users by introducing agile workflows and automating data pipelines to improve efficiency."
+      achievements: [
+        "Drove workflow optimizations impacting $1.2M in client revenue by analyzing business processes for a $32M pharmaceutical compensation platform.",
+        "Supported the rollout of an analytics dashboard to over 200 enterprise users, gathering feedback to maintain a 98% user satisfaction rate.",
+        "Increased quarterly feature delivery by 26% by writing user stories and acceptance criteria within an Agile framework.",
+        "Grew the active user base by 45% to 580 by providing data analysis on key platform adoption metrics within an OKR framework.",
+        "Reduced monthly support tickets by 40% by analyzing ticket data to identify user pain points and inform a system redesign."
+      ]
     },
     {
       company: "Kalo Labs",
       role: "Founder (Mar 2020 – Oct 2020)",
-      summary: "Founded a digital marketing agency where I led the full customer lifecycle from outreach to contract, and built a custom automation platform to streamline client notifications and lead management."
+      achievements: [
+        "Founded and scaled a solo-operated digital marketing agency from $0 to $15K in monthly recurring revenue (MRR).",
+        "Acquired and closed a portfolio of 12+ retained clients with an average contract value of over $1,200/month by engineering and executing a full-cycle sales process.",
+        "Delivered an average 25% increase in organic traffic and a 15% reduction in client Cost Per Acquisition (CPA) by directing multi-channel marketing strategies.",
+        "Cut administrative overhead by over 50% by building a scalable operational framework with automated reporting and standardized workflows."
+      ]
     }
   ];
 
   const projects = [
     {
       title: "Film Search 🎬",
-      description: "Ever get frustrated trying to find a movie you can't quite name? This is the fix. I built a search engine from the ground up that lets you talk to it like a person. It uses a custom data pipeline and a 70B parameter LLM to understand what you mean, not just what you type.",
+      description: "Ever get frustrated trying to find a movie you can't quite name? This is the fix. I built a search engine that lets you talk to it like a person, using an LLM to understand what you mean, not just what you type.",
+      details: [
+          "Architected a scalable data pipeline using a crawler and PostgreSQL, enabling real-time search across 54k+ films.",
+          "Built core search functionality using TF-IDF and BM25 ranking algorithms to deliver relevant and fast query results.",
+          "Integrated a Llama 3.1 70B LLM to create a ”Film Chat” feature, allowing users to interact with film data."
+      ],
       stack: "Node.js, React, Express.js, PostgreSQL, Python, TailwindCSS, Scrapy, Groq",
       links: [
           { name: "Live", url: "https://filmsearch-kappa.vercel.app/" },
@@ -41,43 +55,22 @@
     {
       title: "ChuckleBox 🤖",
       description: "This project, built with the MIT AI Club, tackles a tough problem: analyzing hours of audio. I designed a scalable AWS backend and an asynchronous pipeline that can take massive audio files and process them for machine learning analysis, all without crashing.",
+      details: [], // Add specific, quantified achievements here if you have them
       stack: "Python, React, Flask, TensorFlow, Large Language Models (LLMs), AWS",
       links: [
           { name: "Project Page", url: "https://www.sundai.club/projects/bf3fd58f-0f07-4d9b-a2a0-01a4582ce3ae" }
       ]
     },
     {
-      title: "YouTube Comment Analyzer 📊",
-      description: "An NLP exploration that visualizes YouTube comment sections as a word cloud and uses the data to train a text generation model. It's a quick way to get the pulse of a comment section and see what the hive mind is thinking.",
-      stack: "Python, NLP, Machine Learning",
-      links: [
-        { name: "Code", url: "https://github.com/sreenish27/YouTube-Comment-Analysis-and-Text-Generation" }
-      ]
-    },
-    {
       title: "Customer Churn Analysis 📉",
       description: "A practical application of data science to predict customer churn for a music player. This project uses a mix of regression, SVM, and PCA to identify users who are likely to leave, giving the business a chance to intervene.",
+      details: [], // Add specific, quantified achievements here if you have them
       stack: "Python, Scikit-learn, Pandas, SVM, PCA",
       links: [
         { name: "Code", url: "https://github.com/sreenish27/Customer-Churn-Analysis" }
       ]
     },
-    {
-      title: "Ball Classifier 🏀",
-      description: "A fun computer vision project that uses a neural network to recognize different kinds of sports balls. It's a simple but effective demonstration of building and training a custom image classifier.",
-      stack: "Python, TensorFlow, Keras, Computer Vision",
-      links: [
-        { name: "Code", url: "https://github.com/sreenish27/ball_classifier" }
-      ]
-    },
-    {
-      title: "Voyantra 🌍",
-      description: "A no-nonsense trip planner for when your wallet has the final say. Instead of endless scrolling, you just tell it your budget, and it generates a full travel itinerary. It’s all about making travel accessible by putting the financial constraints first.",
-      stack: "Node.js, React, Express.js, MongoDB, TailwindCSS",
-      links: [
-        { name: "Code", url: "https://github.com/sreenish27/voyantra" }
-      ]
-    },
+    // Add other projects here following the same structure
   ];
   
   const education = [
@@ -107,20 +100,16 @@
 
   const skills = [
     {
-        category: "Product & Design",
-        items: ["UX/UI Design", "Figma", "Stakeholder Management", "JIRA", "Agile Methodologies", "Go-to-Market Strategy"]
+      category: "Product & Design",
+      items: ["Agile Methodologies", "User Research", "Requirements Gathering", "Business Case Development", "A/B Testing", "Stakeholder Management", "JIRA", "Figma"]
     },
     {
-        category: "Languages & Frameworks",
-        items: ["Python", "JavaScript/TypeScript", "React", "Node.js", "Express.js", "TailwindCSS"]
+      category: "Languages & Frameworks",
+      items: ["Python", "SQL", "JavaScript/TypeScript", "React", "Node.js", "Express.js", "TailwindCSS"]
     },
     {
-        category: "Databases & DevOps",
-        items: ["PostgreSQL", "MongoDB", "AWS", "Docker", "Git", "CI/CD"]
-    },
-    {
-        category: "Engineering Fundamentals",
-        items: ["System Design", "Microservices", "TDD", "Algorithms", "Data Structures"]
+      category: "Data & DevOps",
+      items: ["PostgreSQL", "MongoDB", "AWS", "Docker", "Git", "CI/CD", "dbt", "ETL", "Looker"]
     }
   ];
 
@@ -130,9 +119,9 @@
   <header class="intro-header">
     <h1 class="greeting">Hi, I’m Krithik 👋</h1>
     <p class="intro-text">
-        I’m a <strong>product builder</strong> who bridges the gap between ambitious technical goals and real-world business needs. I thrive in roles that demand full ownership—from initial strategy and design to engineering execution and stakeholder management. I'm the person you bring in when you need to not only build a product right, but also build the right product.
+        I build AI products. My background in engineering management and business operations allows me to create solutions that are both technically robust and financially viable. I focus on measurable impact, such as <strong>reducing model inference costs by 28%</strong>, <strong>increasing user engagement by 45%</strong>, and <strong>driving optimizations that impact millions in revenue</strong>.
         <br><br>
-        Based in San Jose, CA, and ready to relocate for the right opportunity. Outside of work, you’ll usually find me hitting the gym, playing chess, diving into a good non-fiction book, or reading up about the latest tech advancements on Twitter.
+        Based in San Jose, CA, and ready to relocate for the right opportunity.
     </p>
     <div class="header-links">
       <a href="https://www.linkedin.com/in/krithiksai/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -149,7 +138,7 @@
     </div>
   </header>
 
-   <section>
+    <section>
       <h2>What I’m Working Toward</h2>
       <p class="mission-statement">
         I'm seeking a role where I can own the full product lifecycle on an AI-native team. My goal is to operate as a true product builder, fusing my skills in engineering, product, and design to ship solutions that solve meaningful user problems.
@@ -163,7 +152,11 @@
         <div class="job-entry">
           <h3>{job.company}</h3>
           <p class="role">{job.role}</p>
-          <p class="job-summary">{job.summary}</p>
+          <ul class="achievements-list">
+            {#each job.achievements as achievement}
+              <li>{achievement}</li>
+            {/each}
+          </ul>
         </div>
       {/each}
     </div>
@@ -176,6 +169,15 @@
         <div class="project-card">
           <h3>{project.title}</h3>
           <p class="description">{project.description}</p>
+          
+          {#if project.details && project.details.length > 0}
+            <ul class="achievements-list project-details">
+              {#each project.details as detail}
+                <li>{detail}</li>
+              {/each}
+            </ul>
+          {/if}
+
           <p class="stack"><strong>Stack:</strong> {project.stack}</p>
           <div class="project-links">
             {#each project.links as link}
@@ -366,12 +368,21 @@
     color: #555;
     font-size: 1rem;
     font-weight: 700;
-    margin: 0.25rem 0 0.5rem 0;
+    margin: 0.25rem 0 1rem 0; /* Increased bottom margin */
   }
-  .job-summary {
-      color: #333;
-      line-height: 1.7;
-      margin: 0;
+  /* NEW styles for the achievements list */
+  .achievements-list {
+    list-style-type: '→ ';
+    padding-left: 1.2rem;
+    color: #333;
+    line-height: 1.7;
+    margin: 0;
+  }
+  .achievements-list li {
+    margin-bottom: 0.75rem;
+  }
+  .achievements-list.project-details {
+    margin: 1rem 0;
   }
   .notes-list {
       list-style-type: '→ ';
@@ -405,7 +416,7 @@
   }
   .description {
     color: #333;
-    margin: 0.5rem 0 1.5rem 0;
+    margin: 0.5rem 0 0 0;
     line-height: 1.7;
   }
   .stack {
