@@ -119,7 +119,7 @@
   <header class="intro-header">
     <h1 class="greeting">Hi, I’m Krithik 👋</h1>
     <p class="intro-text">
-        I build AI products. My background in engineering management and business operations allows me to create solutions that are both technically robust and financially viable. I focus on measurable impact, such as <strong>reducing model inference costs by 28%</strong>, <strong>increasing user engagement by 45%</strong>, and <strong>driving optimizations that impact millions in revenue</strong>.
+        I build AI products. My background in engineering management and computer science allows me to create solutions that are both technically robust and financially viable. I focus on measurable impact, such as <strong>reducing model inference costs by 28%</strong>, <strong>increasing user engagement by 45%</strong>, and <strong>driving optimizations that impact millions in revenue</strong>.
         <br><br>
         Based in San Jose, CA, and ready to relocate for the right opportunity.
     </p>
