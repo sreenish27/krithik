@@ -119,9 +119,9 @@
   <header class="intro-header">
     <h1 class="greeting">Hi, I’m Krithik 👋</h1>
     <p class="intro-text">
-        I build AI products. My background in engineering management and computer science allows me to create solutions that are both technically robust and financially viable. I focus on measurable impact, such as <strong>reducing model inference costs by 28%</strong>, <strong>increasing user engagement by 45%</strong>, and <strong>driving optimizations that impact millions in revenue</strong>.
+        I’m a <strong>product builder</strong> who bridges the gap between ambitious technical goals and real-world business needs. I thrive in roles that demand full ownership—from initial strategy and design to engineering execution and stakeholder management. I'm the person you bring in when you need to not only build a product right, but also build the right product.
         <br><br>
-        Based in San Jose, CA, and ready to relocate for the right opportunity.
+        Based in San Jose, CA, and ready to relocate for the right opportunity. Outside of work, you’ll usually find me hitting the gym, playing chess, diving into a good non-fiction book, or reading up about the latest tech advancements on Twitter.
     </p>
     <div class="header-links">
       <a href="https://www.linkedin.com/in/krithiksai/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
