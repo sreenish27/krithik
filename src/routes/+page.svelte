@@ -55,7 +55,7 @@
     {
       title: "ChuckleBox 🤖",
       description: "This project, built with the MIT AI Club, tackles a tough problem: analyzing hours of audio. I designed a scalable AWS backend and an asynchronous pipeline that can take massive audio files and process them for machine learning analysis, all without crashing.",
-      details: [], // Add specific, quantified achievements here if you have them
+      details: [],
       stack: "Python, React, Flask, TensorFlow, Large Language Models (LLMs), AWS",
       links: [
           { name: "Project Page", url: "https://www.sundai.club/projects/bf3fd58f-0f07-4d9b-a2a0-01a4582ce3ae" }
@@ -64,13 +64,30 @@
     {
       title: "Customer Churn Analysis 📉",
       description: "A practical application of data science to predict customer churn for a music player. This project uses a mix of regression, SVM, and PCA to identify users who are likely to leave, giving the business a chance to intervene.",
-      details: [], // Add specific, quantified achievements here if you have them
+      details: [],
       stack: "Python, Scikit-learn, Pandas, SVM, PCA",
       links: [
         { name: "Code", url: "https://github.com/sreenish27/Customer-Churn-Analysis" }
       ]
     },
-    // Add other projects here following the same structure
+    {
+      title: "Voyantra ✈️",
+      description: "A full-stack travel and tour booking website. I built the backend API with Node.js and Express for handling user authentication, tour bookings, and payments, and crafted the frontend with server-side templates.",
+      details: [],
+      stack: "Node.js, Express.js, MongoDB, Mongoose, Pug, JavaScript",
+      links: [
+          { name: "Code", url: "https://github.com/sreenish27/voyantra" }
+      ]
+    },
+    {
+      title: "YouTube Comment Analysis & Generation 💬",
+      description: "This project analyzes sentiment in YouTube comments and uses a fine-tuned GPT-2 model to generate new, contextually relevant comments. It's a deep dive into NLP and generative AI.",
+      details: [],
+      stack: "Python, TensorFlow, Keras, Hugging Face Transformers, NLTK, Pandas",
+      links: [
+        { name: "Code", url: "https://github.com/sreenish27/YouTube-Comment-Analysis-and-Text-Generation" }
+      ]
+    }
   ];
   
   const education = [
@@ -248,340 +265,3 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2025 Krithik Sai Sreenish Gopinath. Built with 💛.</p>
-    </div>
-</footer>
-
-<style>
-  :root {
-      --accent-color: #FF3B30; /* Red Accent Color */
-      --bg-color: #f7f7f7; /* Very light grey */
-      --border-color: #ddd;
-      --selection-bg: #FBBF24; /* Gold/Yellow selection color */
-  }
-
-  /* --- Custom Cursor & Selection --- */
-  html {
-      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>') 12 12, auto;
-      scroll-behavior: smooth;
-  }
-
-  ::selection {
-      background-color: var(--selection-bg);
-      color: #111;
-      text-shadow: none;
-  }
-  ::-moz-selection { /* For Firefox */
-      background-color: var(--selection-bg);
-      color: #111;
-      text-shadow: none;
-  }
-  /* --- End of Custom Styles --- */
-
-
-  /* Base Styles */
-  body {
-      background-color: var(--bg-color);
-      margin: 0;
-      padding: 0;
-      font-family: 'Manrope', sans-serif;
-      color: #333;
-  }
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 6rem 2rem 4rem 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-  h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 0.5rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-  }
-  p {
-    margin: 0 0 1rem 0;
-  }
-
-  /* Header / Intro Section */
-  .intro-header {
-    text-align: left;
-    padding-bottom: 2rem;
-  }
-  .greeting {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-  }
-  .intro-text {
-      font-size: 1.2rem;
-      line-height: 1.7;
-      color: #333;
-      max-width: 70ch;
-  }
-  .header-links {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1rem;
-  }
-  .header-links a {
-    font-weight: 700;
-    padding-bottom: 2px;
-    border-bottom: 2px solid transparent;
-    color: #111;
-    text-decoration: none;
-  }
-  .header-links a:hover {
-      color: var(--accent-color);
-      border-bottom-color: var(--accent-color);
-      transform: translate(-2px, -2px);
-  }
-  .header-links span {
-      color: var(--border-color);
-  }
-
-  /* Mission Statement Section */
-  .mission-statement {
-      font-size: 1.2rem;
-      line-height: 1.7;
-      color: #333;
-  }
-
-  /* Professional Journey & Education Sections */
-  .job-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .role {
-    color: #555;
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 0.25rem 0 1rem 0; /* Increased bottom margin */
-  }
-  /* NEW styles for the achievements list */
-  .achievements-list {
-    list-style-type: '→ ';
-    padding-left: 1.2rem;
-    color: #333;
-    line-height: 1.7;
-    margin: 0;
-  }
-  .achievements-list li {
-    margin-bottom: 0.75rem;
-  }
-  .achievements-list.project-details {
-    margin: 1rem 0;
-  }
-  .notes-list {
-      list-style-type: '→ ';
-      padding-left: 1.2rem;
-      color: #333;
-      line-height: 1.7;
-      margin-top: 1rem;
-  }
-  .notes-list li {
-      margin-bottom: 0.5rem;
-  }
-
-  /* What I've Built Section */
-  .project-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .project-card {
-    padding: 1.5rem;
-    border: 2px solid var(--border-color);
-    border-radius: 4px;
-    background-color: white;
-    transition: all 0.2s ease-out;
-  }
-  .project-card:hover {
-    transform: translate(-4px, -4px) scale(1.01);
-    box-shadow: 4px 4px 0px #111;
-    border-color: #111;
-    background-color: rgba(255, 59, 48, 0.05);
-  }
-  .description {
-    color: #333;
-    margin: 0.5rem 0 0 0;
-    line-height: 1.7;
-  }
-  .stack {
-    font-size: 0.9rem;
-    color: #555;
-    margin: 0;
-  }
-  .project-links {
-      margin-top: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-  }
-  .project-links a {
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 0.25rem 0.75rem;
-      border: 2px solid #111;
-      border-radius: 4px;
-      color: #111;
-      transition: all 0.2s ease-out;
-      text-decoration: none;
-  }
-  .project-links a:hover {
-      background-color: #111;
-      color: white;
-      transform: translateY(-2px);
-  }
-
-  /* Bookshelf Section */
-  .bookshelf {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-  }
-  .book-entry {
-      display: flex;
-      flex-direction: column;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border-color);
-  }
-  .book-title {
-      font-weight: 700;
-      color: #111;
-  }
-  .book-author {
-      font-size: 0.9rem;
-      color: #555;
-  }
-  .goodreads-link {
-      margin-top: 1.5rem;
-      font-weight: 700;
-      display: inline-block;
-      color: #111;
-      text-decoration: none;
-  }
-  .goodreads-link:hover {
-      color: var(--accent-color);
-  }
-
-  /* Skills at a Glance Section */
-  .skills-section-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-  }
-  .skill-group h4 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 0 0 1rem 0;
-      color: #111;
-  }
-  .skills-tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-  }
-  .skill-tag {
-    background-color: #e9e9e9;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #333;
-    transition: all 0.2s ease-out;
-  }
-  .skill-tag:hover {
-      background-color: var(--accent-color);
-      color: white;
-      transform: translateY(-2px);
-  }
-
-  /* Contact Section / Footer */
-  .site-footer {
-    border-top: 2px solid var(--border-color);
-    padding: 4rem 2rem;
-    text-align: center;
-  }
-  .footer-heading {
-    font-size: 2rem;
-    font-weight: 800;
-    margin: 0 0 1rem 0;
-    border: none;
-    text-transform: none;
-    letter-spacing: normal;
-  }
-  .footer-content p {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: #555;
-    max-width: 60ch;
-    margin: 0 auto 2.5rem auto;
-  }
-  .footer-content .contact-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    font-weight: 700;
-    font-size: 1.2rem;
-  }
-  .footer-content .contact-links a {
-    color: #111;
-    text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease-out;
-  }
-  .footer-content .contact-links a:hover {
-    color: var(--accent-color);
-    border-bottom-color: var(--accent-color);
-  }
-  .footer-bottom {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
-  }
-  .footer-bottom p {
-    font-size: 0.9rem;
-    color: #777;
-    margin: 0;
-  }
-/* --- NEW: Mobile Responsiveness --- */
-  @media (max-width: 640px) {
-    main {
-        padding: 4rem 1rem 2rem 1rem; /* Reduced padding for mobile */
-        gap: 3rem; /* Tighter gap between sections */
-    }
-    .greeting {
-        font-size: 2rem; /* Smaller main heading */
-    }
-    .intro-text, .mission-statement {
-        font-size: 1.1rem; /* Slightly smaller body text */
-    }
-    h2 {
-        font-size: 1.1rem; /* Smaller section headings */
-    }
-    .footer-heading {
-        font-size: 1.5rem; /* Smaller footer heading */
-    }
-    .footer-content p {
-        font-size: 1.1rem;
-    }
-    .footer-content .contact-links {
-        font-size: 1rem;
-    }
-  }
-</style>
